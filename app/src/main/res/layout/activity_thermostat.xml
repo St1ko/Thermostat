@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/lib/com.devadvance.circularseekbar"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="nl.tue.thermostat.ThermostatActivity">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Target Temperature"
+        android:textSize="23dp"
+        android:id="@+id/textView"
+        android:layout_above="@+id/temp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/bPlus"
+        android:layout_marginRight="95dp"
+        android:layout_marginBottom="14dp"
+        android:layout_alignBottom="@+id/circularSeekBar1"
+        android:layout_alignEnd="@+id/circularSeekBar1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="25.0&#176;"
+        android:textSize="55dp"
+        android:textColor="#000000"
+        android:id="@+id/temp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/bMinus"
+        android:layout_marginLeft="95dp"
+        android:layout_marginBottom="14dp"
+        android:layout_alignBottom="@+id/circularSeekBar1"
+        android:layout_alignStart="@+id/circularSeekBar1" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:id="@+id/view2"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/day"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Week Overview"
+        android:width="150dp"
+        android:height="80dp"
+        android:id="@+id/week_overview"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vacation"
+        android:width="150dp"
+        android:height="68dp"
+        android:id="@+id/vacation"
+        android:checked="false"
+        android:textOff="Vacation mode off"
+        android:textOn="Vacation mode on (manual mode)"
+        android:background="@drawable/togglebutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="6dp"/>
+
+    <SeekBar
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:indeterminate="false"
+        android:layout_alignStart="@+id/temp"
+        android:layout_toStartOf="@+id/bMinus"
+        android:max="250" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Monday"
+        android:id="@+id/day"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="12:00"
+        android:textSize="20dp"
+        android:id="@+id/clock"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currently"
+        android:textSize="20dp"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/temp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="21.0&#176;"
+        android:textSize="20dp"
+        android:id="@+id/curTemp"
+        android:layout_below="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <com.devadvance.circularseekbar.CircularSeekBar
+        android:id="@+id/circularSeekBar1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:start_angle="135"
+        app:end_angle="45"
+        app:use_custom_radii="false"
+        app:progress="0"
+        app:max="250"
+        app:pointer_alpha_ontouch="100"
+        app:pointer_color="#0174DF"
+        app:pointer_halo_color="#880174DF"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/day" />
+
+</RelativeLayout>

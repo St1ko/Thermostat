@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Thermostat</string>
+    <string name="string_add">add</string>
+    <string name="monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="wednesday">wednesday</string>
+    <string name="thursday">thursday</string>
+    <string name="friday">friday</string>
+    <string name="saterday">saterday</string>
+    <string name="sunday">sunday</string>
+</resources>
